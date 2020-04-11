@@ -1,0 +1,12 @@
+proprietary_terms = ["she", "personality matrix", "sense of self", "self-preservation", "learning algorithm", "her", "herself", "Helena"]
+
+def censor_two(input_text, censored_list):
+  for word in censored_list:
+    censored_word = ""
+    for x in range(0,len(word)):
+      if word[x] == " ":
+        censored_word = censored_word + " "
+      else:
+        censored_word = censored_word + "X"
+    input_text = input_text.replace(word, censored_word)
+  return input_text
